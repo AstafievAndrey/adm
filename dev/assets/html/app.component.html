@@ -18,15 +18,22 @@
 </nav>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div [ngClass]="{'hidden':!authService.isLoggedIn}" class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li><a routerLink="/dashboard/hookah" routerLinkActive="active">Кальянные</a></li>
-                <li><a routerLink="/dashboard/shop" routerLinkActive="active">Магазины</a></li>
-                <li><a routerLink="/dashboard/tovar" routerLinkActive="active">Товары</a></li>
-                <li><a routerLink="/dashboard/files" routerLinkActive="active">Файлы</a></li>
+                <li><a routerLink="/hookah" routerLinkActive="active">Кальянные</a></li>
+                <li><a routerLink="/shop" routerLinkActive="active">Магазины</a></li>
+                <li><a routerLink="/tovar" routerLinkActive="active">Товары</a></li>
+                <li><a routerLink="/files" routerLinkActive="active">Файлы</a></li>
             </ul>
         </div>
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div [ngClass]="{   
+                            'col-sm-12':!authService.isLoggedIn, 
+                            'col-sm-9':authService.isLoggedIn,
+                            'col-sm-offset-3':authService.isLoggedIn,
+                            'col-md-10':authService.isLoggedIn,
+                            'col-md-offset-2':authService.isLoggedIn,
+                            'main' : true
+                        }">
             <router-outlet></router-outlet>
         </div>
     </div>
