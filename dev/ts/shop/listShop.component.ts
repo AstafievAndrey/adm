@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-    templateUrl:'app/html/listHookah.component.html'
+    templateUrl:'app/html/listShop.component.html',
+    styleUrls:['app/css/listShop.component.css'], 
 })
 
-export class ListHookahComponent { 
+export class ListShopComponent { 
 
 }

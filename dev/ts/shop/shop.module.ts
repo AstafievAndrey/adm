@@ -1,23 +1,25 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { hookahRouting}  from './hookah.routing';
+import { shopRouting}  from './shop.routing';
          
-import { HookahComponent }   from './hookah.component';
-import { ListHookahComponent }   from './listHookah.component';
+import { ShopComponent }   from './shop.component';
+import { ListShopComponent }   from './listShop.component';
+import { AddShopComponent }         from './addShop.component';
 
 @NgModule({
     imports:      [ 
         BrowserModule,
-        hookahRouting 
+        shopRouting 
     ],
     declarations: [ 
-        HookahComponent,
-        ListHookahComponent
+        ShopComponent,
+        ListShopComponent,
+        AddShopComponent
     ],
     providers: [
 
     ],
-    bootstrap:    [ HookahComponent ],
+    bootstrap:    [ ShopComponent ],
 })
 
-export class HookahModule { }
+export class ShopModule { }

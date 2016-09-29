@@ -8,12 +8,12 @@ import { LoginComponent }   from './login/login.component';
 import { AuthGuard }                from './services/auth-guard.service';
 import { AuthService }                from './services/auth.service';
 
-import { HookahModule }    from './hookah/hookah.module'
+import { ShopModule }    from './shop/shop.module'
 
 @NgModule({
     imports:      [ 
         BrowserModule,
-        HookahModule,
+        ShopModule,
         routing 
     ],
     declarations: [ 

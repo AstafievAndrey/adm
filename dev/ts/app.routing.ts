@@ -19,7 +19,7 @@ const appRoutes: Routes = [
                 path: '',
                 canActivateChild: [AuthGuard],
                 children: [
-                    { path: 'hookah' }
+                    { path: 'shop' }
                 ]
             }
         ]

@@ -2,24 +2,25 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard }                from '../services/auth-guard.service';
-import { HookahComponent }    from './hookah.component';
-import { ListHookahComponent }    from './listHookah.component';
+import { ShopComponent }            from './shop.component';
+import { ListShopComponent }        from './listShop.component';
+import { AddShopComponent }         from './addShop.component';
 
-const hookahRoutes: Routes = [
+const shopRoutes: Routes = [
     { 
-        path: 'hookah',  
-        component: HookahComponent, 
+        path: 'shop',  
+        component: ShopComponent, 
         canActivate: [AuthGuard],
         children: [
             {
                 path: '',
                 canActivateChild: [AuthGuard],
                 children: [
-                    { path: '', component: ListHookahComponent }
+                    { path: '', component: ListShopComponent }
                 ]
             }
         ]
     },
 ];
 
-export const hookahRouting: ModuleWithProviders = RouterModule.forChild(hookahRoutes);
+export const shopRouting: ModuleWithProviders = RouterModule.forChild(shopRoutes);
