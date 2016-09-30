@@ -16,7 +16,8 @@ const shopRoutes: Routes = [
                 path: '',
                 canActivateChild: [AuthGuard],
                 children: [
-                    { path: '', component: ListShopComponent }
+                    { path: '', component: ListShopComponent },
+                    { path: 'add', component: AddShopComponent }
                 ]
             }
         ]
