@@ -1,40 +1,47 @@
 <div class='container-fluid'>
     <div class='row'>
-        <form class="form-horizontal">
+        <form class="form-horizontal" (ngSubmit)="onSubmit()">
             <div class="form-group">
                 <label for="name" class="col-sm-2 control-label">Название</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="name"  name="name" placeholder="Название">
+                    <input type="text" class="form-control" id="name"  
+                           [(ngModel)]="shop.name" name="name" placeholder="Название">
                 </div>
             </div>
             <div class="form-group">
                 <label for="address" class="col-sm-2 control-label">Адрес</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="address" id="address" placeholder="Адрес">
+                    <input type="text" class="form-control" id="address" placeholder="Адрес"
+                        [(ngModel)]="shop.address"
+                        name="address">
                 </div>
             </div>
             <div class="form-group">
                 <label for="phone" class="col-sm-2 control-label">Телефон</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефон">
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефон"
+                        [(ngModel)]="shop.phone">
                 </div>
             </div>
             <div class="form-group">
                 <label for="site" class="col-sm-2 control-label">Сайт</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="site" id="site" placeholder="Сайт">
+                    <input type="text" class="form-control" name="site" id="site" placeholder="Сайт"
+                        [(ngModel)]="shop.site">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inst" class="col-sm-2 control-label">Инстаграм</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="inst" id="inst" placeholder="Инстаграм">
+                    <input type="text" class="form-control" name="inst" id="inst" placeholder="Инстаграм"
+                        [(ngModel)]="shop.inst">
                 </div>
             </div>
             <div class="form-group">
                 <label for="vk" class="col-sm-2 control-label">Вконтакте</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="vk" id="vk" placeholder="Страница в вконтакте">
+                    <input type="text" class="form-control" name="vk" id="vk" placeholder="Страница в вконтакте"
+                        [(ngModel)]="shop.vk">
                 </div>
             </div>
             <div class="form-group">
@@ -60,13 +67,15 @@
             <div class="form-group">
                 <label for="short_desc" class="col-sm-2 control-label">Краткое описание</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="short_desc" id="short_desc" placeholder="Краткое описание">
+                    <input type="text" class="form-control" name="short_desc" id="short_desc" placeholder="Краткое описание"
+                        [(ngModel)]="shop.short_desc">
                 </div>
             </div>
             <div class="form-group">
                 <label for="desc" class="col-sm-2 control-label">Полное описание</label>
                 <div class="col-sm-10">
-                    <textarea class="form-control" name="desc" id="desc" placeholder="Полное описание"></textarea>
+                    <textarea class="form-control" name="desc" id="desc" placeholder="Полное описание" 
+                        [(ngModel)]="shop.desc"></textarea>
                 </div>
             </div>
             <div class="form-group">
@@ -74,12 +83,14 @@
                     <label class="control-label">Парковка</label>
                     <br>
                     <label>
-                        <input type="radio" name="parking" id="parking0" value="0" checked>
+                        <input type="radio" name="parking" id="parking0" value="false"
+                            [(ngModel)]="shop.parking">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="parking" id="parking1" value="1">
+                        <input type="radio" name="parking" id="parking1"
+                            [(ngModel)]="shop.parking" value="true">
                         Да
                     </label>
                 </div>
@@ -87,12 +98,14 @@
                     <label class="control-label">Веранда</label>
                     <br>
                     <label>
-                        <input type="radio" name="veranda" id="veranda0" value="0" checked>
+                        <input type="radio" name="veranda" id="veranda0" value="0"
+                            [(ngModel)]="shop.veranda">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="veranda" id="veranda1" value="1">
+                        <input type="radio" name="veranda" id="veranda1" value="1"
+                            [(ngModel)]="shop.veranda">
                         Да
                     </label>
                 </div>
@@ -100,12 +113,14 @@
                     <label class="control-label">Алкоголь</label>
                     <br>
                     <label>
-                        <input type="radio" name="alcohol" id="alcohol0" value="0" checked>
+                        <input type="radio" name="alcohol" id="alcohol0" value="0"
+                            [(ngModel)]="shop.veranda">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="alcohol" id="alcohol1" value="1">
+                        <input type="radio" name="alcohol" id="alcohol1" value="1"
+                            [(ngModel)]="shop.veranda">
                         Да
                     </label>
                 </div>
@@ -300,7 +315,7 @@
             </div>
             <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <button type="submit" (click)="addShop()" class="btn btn-default">Сохранить</button>
+                    <button type="submit" class="btn btn-default">Сохранить</button>
                 </div>
             </div>
         </form>
