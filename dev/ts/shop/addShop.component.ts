@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
 
 export class AddShopComponent{
     
+    addShop(){
+        console.log(1);
+    }
+    
 }

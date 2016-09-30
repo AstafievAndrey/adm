@@ -1,7 +1,308 @@
 <div class='container-fluid'>
     <div class='row'>
-        <div class="col-sm-12">
-            add
-        </div>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">Название</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name"  name="name" placeholder="Название">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="address" class="col-sm-2 control-label">Адрес</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="Адрес">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="col-sm-2 control-label">Телефон</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефон">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="site" class="col-sm-2 control-label">Сайт</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="site" id="site" placeholder="Сайт">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inst" class="col-sm-2 control-label">Инстаграм</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="inst" id="inst" placeholder="Инстаграм">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="vk" class="col-sm-2 control-label">Вконтакте</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="vk" id="vk" placeholder="Страница в вконтакте">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city" class="col-sm-2 control-label">Город</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="city" id="city">
+                        <option value="1">Казань</option>
+                        <option value="2">Уфа</option>
+                        <option value="3">Ульяновск</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="type" class="col-sm-2 control-label">Тип</label>
+                <div class="col-sm-10">
+                    <select class="form-control" name="type" id="type">
+                        <option value="1">Кальянная</option>
+                        <option value="2">Магазин</option>
+                        <option value="3">Прочее</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="short_desc" class="col-sm-2 control-label">Краткое описание</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="short_desc" id="short_desc" placeholder="Краткое описание">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="desc" class="col-sm-2 control-label">Полное описание</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" name="desc" id="desc" placeholder="Полное описание"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-2 col-xs-6">
+                    <label class="control-label">Парковка</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="parking" id="parking0" value="0" checked>
+                        Нет
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="parking" id="parking1" value="1">
+                        Да
+                    </label>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <label class="control-label">Веранда</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="veranda" id="veranda0" value="0" checked>
+                        Нет
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="veranda" id="veranda1" value="1">
+                        Да
+                    </label>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <label class="control-label">Алкоголь</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="alcohol" id="alcohol0" value="0" checked>
+                        Нет
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="alcohol" id="alcohol1" value="1">
+                        Да
+                    </label>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <label class="control-label">Еда</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="food" id="food0" value="0" checked>
+                        Нет
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="food" id="food1" value="1">
+                        Да
+                    </label>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <label class="control-label">Приставки</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="console" id="console0" value="0" checked>
+                        Нет
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="console" id="console1" value="1">
+                        Да
+                    </label>
+                </div>
+                <div class="col-sm-2 col-xs-6">
+                    <label class="control-label">Настольные игры</label>
+                    <br>
+                    <label>
+                        <input type="radio" name="board" id="board0" value="0" checked>
+                        Нет
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" name="board" id="board1" value="1">
+                        Да
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>Понедельник</strong>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio1" checked="" value="1" name="optradio1">Выходной</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio1" value="2" name="optradio1">Круглосуточно</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio1" value="3" name="optradio1">Время</label>
+                    </div>
+                    <div>От:
+                        <select name="work_b_1" id="work_b_1" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                    <div>
+                        До:
+                        <select name="work_e_1" id="work_e_1" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>Вторник</strong>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio2" checked="" value="1" name="optradio2">Выходной</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio2" value="2" name="optradio2">Круглосуточно</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio2" value="3" name="optradio2">Время</label>
+                    </div>
+                    <div>От:
+                        <select name="work_b_2" id="work_b_2" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                    <div>
+                        До:
+                        <select name="work_e_2" id="work_e_2" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>Среда</strong>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio3" checked="" value="1" name="optradio3">Выходной</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio3" value="2" name="optradio3">Круглосуточно</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio3" value="3" name="optradio3">Время</label>
+                    </div>
+                    <div>От:
+                        <select name="work_b_3" id="work_b_3" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                    <div>
+                        До:
+                        <select name="work_e_3" id="work_e_3" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>Четверг</strong>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio4" checked="" value="1" name="optradio4">Выходной</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio4" value="2" name="optradio4">Круглосуточно</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio4" value="3" name="optradio4">Время</label>
+                    </div>
+                    <div>От:
+                        <select name="work_b_4" id="work_b_4" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                    <div>
+                        До:
+                        <select name="work_e_4" id="work_e_4" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>Пятница</strong>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio5" checked="" value="1" name="optradio5">Выходной</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio5" value="2" name="optradio5">Круглосуточно</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio5" value="3" name="optradio5">Время</label>
+                    </div>
+                    <div>От:
+                        <select name="work_b_5" id="work_b_5" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                    <div>
+                        До:
+                        <select name="work_e_5" id="work_e_5" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>Суббота</strong>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio6" checked="" value="1" name="optradio6">Выходной</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio6" value="2" name="optradio6">Круглосуточно</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio6" value="3" name="optradio6">Время</label>
+                    </div>
+                    <div>От:
+                        <select name="work_b_6" id="work_b_6" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                    <div>
+                        До:
+                        <select name="work_e_6" id="work_e_6" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>Воскресенье</strong>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio7" checked="" value="1" name="optradio7">Выходной</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio7" value="2" name="optradio7">Круглосуточно</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" class="optradio7" value="3" name="optradio7">Время</label>
+                    </div>
+                    <div>От:
+                        <select name="work_b_7" id="work_b_7" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                    <div>
+                        До:
+                        <select name="work_e_7" id="work_e_7" class="form-control">
+                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" (click)="addShop()" class="btn btn-default">Сохранить</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
