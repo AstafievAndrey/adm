@@ -26,4 +26,5 @@ export class Shop{
     console:string;
     board:string;
     shedule:Schedule[];
+    file:FileList;
 }
