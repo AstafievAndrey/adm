@@ -1,7 +1,9 @@
 export class Schedule{
-    type_work:number;
-    work_begin:number;
-    work_end:number;
+    id:number;
+    name: string;
+    type_work:string;
+    work_begin:string;
+    work_end:string;
 }
 
 export class Shop{
@@ -22,6 +24,6 @@ export class Shop{
     food:string;
     veranda:string;
     console:string;
-    board_game:string;
-//    shedule:Schedule[];
+    board:string;
+    shedule:Schedule[];
 }

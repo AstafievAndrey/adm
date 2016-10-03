@@ -98,13 +98,13 @@
                     <label class="control-label">Веранда</label>
                     <br>
                     <label>
-                        <input type="radio" name="veranda" id="veranda0" value="0"
+                        <input type="radio" name="veranda" id="veranda0" value="false"
                             [(ngModel)]="shop.veranda">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="veranda" id="veranda1" value="1"
+                        <input type="radio" name="veranda" id="veranda1" value="true"
                             [(ngModel)]="shop.veranda">
                         Да
                     </label>
@@ -113,14 +113,14 @@
                     <label class="control-label">Алкоголь</label>
                     <br>
                     <label>
-                        <input type="radio" name="alcohol" id="alcohol0" value="0"
-                            [(ngModel)]="shop.veranda">
+                        <input type="radio" name="alcohol" id="alcohol0" value="false"
+                            [(ngModel)]="shop.alcohol">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="alcohol" id="alcohol1" value="1"
-                            [(ngModel)]="shop.veranda">
+                        <input type="radio" name="alcohol" id="alcohol1" value="true"
+                            [(ngModel)]="shop.alcohol">
                         Да
                     </label>
                 </div>
@@ -128,12 +128,14 @@
                     <label class="control-label">Еда</label>
                     <br>
                     <label>
-                        <input type="radio" name="food" id="food0" value="0" checked>
+                        <input type="radio" name="food" id="food0" value="false"
+                            [(ngModel)]="shop.food">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="food" id="food1" value="1">
+                        <input type="radio" name="food" id="food1" value="true"
+                            [(ngModel)]="shop.food">
                         Да
                     </label>
                 </div>
@@ -141,12 +143,14 @@
                     <label class="control-label">Приставки</label>
                     <br>
                     <label>
-                        <input type="radio" name="console" id="console0" value="0" checked>
+                        <input type="radio" name="console" id="console0" value="false"
+                            [(ngModel)]="shop.console">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="console" id="console1" value="1">
+                        <input type="radio" name="console" id="console1" value="true"
+                            [(ngModel)]="shop.console">
                         Да
                     </label>
                 </div>
@@ -154,163 +158,31 @@
                     <label class="control-label">Настольные игры</label>
                     <br>
                     <label>
-                        <input type="radio" name="board" id="board0" value="0" checked>
+                        <input type="radio" name="board" id="board0" value="false"
+                            [(ngModel)]="shop.board">
                         Нет
                     </label>
                     <br>
                     <label>
-                        <input type="radio" name="board" id="board1" value="1">
+                        <input type="radio" name="board" id="board1" value="true"
+                            [(ngModel)]="shop.board">
                         Да
                     </label>
                 </div>
             </div>
             <div class="form-group">
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <strong>Понедельник</strong>
+                <div *ngFor="let shed of shop.shedule" class="col-md-2 col-sm-3 col-xs-6">
+                    <strong>{{shed.name}}</strong>
                     <div class="radio">
-                        <label><input type="radio" class="optradio1" checked="" value="1" name="optradio1">Выходной</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio1" value="2" name="optradio1">Круглосуточно</label>
+                        <label><input type="radio" class="optradio1" [(ngModel)]="shed.type_work" value="1" name="optradio{{shed.id}}">Выходной</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" class="optradio1" value="3" name="optradio1">Время</label>
-                    </div>
-                    <div>От:
-                        <select name="work_b_1" id="work_b_1" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                    <div>
-                        До:
-                        <select name="work_e_1" id="work_e_1" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <strong>Вторник</strong>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio2" checked="" value="1" name="optradio2">Выходной</label>
+                        <label><input type="radio" class="optradio1" [(ngModel)]="shed.type_work" value="2" name="optradio{{shed.id}}">Круглосуточно</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" class="optradio2" value="2" name="optradio2">Круглосуточно</label>
+                        <label><input type="radio" class="optradio1" [(ngModel)]="shed.type_work" value="3" name="optradio{{shed.id}}">Время</label>
                     </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio2" value="3" name="optradio2">Время</label>
-                    </div>
-                    <div>От:
-                        <select name="work_b_2" id="work_b_2" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                    <div>
-                        До:
-                        <select name="work_e_2" id="work_e_2" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <strong>Среда</strong>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio3" checked="" value="1" name="optradio3">Выходной</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio3" value="2" name="optradio3">Круглосуточно</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio3" value="3" name="optradio3">Время</label>
-                    </div>
-                    <div>От:
-                        <select name="work_b_3" id="work_b_3" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                    <div>
-                        До:
-                        <select name="work_e_3" id="work_e_3" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <strong>Четверг</strong>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio4" checked="" value="1" name="optradio4">Выходной</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio4" value="2" name="optradio4">Круглосуточно</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio4" value="3" name="optradio4">Время</label>
-                    </div>
-                    <div>От:
-                        <select name="work_b_4" id="work_b_4" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                    <div>
-                        До:
-                        <select name="work_e_4" id="work_e_4" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <strong>Пятница</strong>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio5" checked="" value="1" name="optradio5">Выходной</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio5" value="2" name="optradio5">Круглосуточно</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio5" value="3" name="optradio5">Время</label>
-                    </div>
-                    <div>От:
-                        <select name="work_b_5" id="work_b_5" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                    <div>
-                        До:
-                        <select name="work_e_5" id="work_e_5" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <strong>Суббота</strong>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio6" checked="" value="1" name="optradio6">Выходной</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio6" value="2" name="optradio6">Круглосуточно</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio6" value="3" name="optradio6">Время</label>
-                    </div>
-                    <div>От:
-                        <select name="work_b_6" id="work_b_6" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                    <div>
-                        До:
-                        <select name="work_e_6" id="work_e_6" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <strong>Воскресенье</strong>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio7" checked="" value="1" name="optradio7">Выходной</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio7" value="2" name="optradio7">Круглосуточно</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" class="optradio7" value="3" name="optradio7">Время</label>
-                    </div>
-                    <div>От:
-                        <select name="work_b_7" id="work_b_7" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
-                    <div>
-                        До:
-                        <select name="work_e_7" id="work_e_7" class="form-control">
-                            <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option>		    </select>
-                    </div>
+
                 </div>
             </div>
             <div class="form-group">
