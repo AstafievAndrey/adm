@@ -2,12 +2,12 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent }   from './app.component';
-import { ShopComponent } from './shop/shop.component';
+import { ShopComponent } from './modules/shop/shop.component';
 
 import { AuthGuard }                from './services/auth-guard.service';
 
 import { loginRoutes,
-         authProviders }  from './login/login.routing';
+         authProviders }  from './modules/login/login.routing';
 
 const appRoutes: Routes = [
     ...loginRoutes,

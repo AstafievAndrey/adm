@@ -1,10 +1,10 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AuthGuard }                from '../services/auth-guard.service';
+import { AuthGuard }                from '../../services/auth-guard.service';
 import { ShopComponent }            from './shop.component';
-import { ListShopComponent }        from './listShop.component';
-import { AddShopComponent }         from './addShop.component';
+import { ListShopComponent }        from './components/listShop.component';
+import { AddShopComponent }         from './components/addShop.component';
 
 const shopRoutes: Routes = [
     { 

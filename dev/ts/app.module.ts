@@ -3,12 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing}  from './app.routing';
          
 import { AppComponent }   from './app.component';
-import { LoginComponent }   from './login/login.component';
+import { LoginComponent }   from './modules/login/login.component';
 
 import { AuthGuard }                from './services/auth-guard.service';
 import { AuthService }                from './services/auth.service';
 
-import { ShopModule }    from './shop/shop.module'
+import { ShopModule }    from './modules/shop/shop.module'
 
 @NgModule({
     imports:      [ 

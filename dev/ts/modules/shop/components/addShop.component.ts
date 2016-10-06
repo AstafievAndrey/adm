@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { Shop } from '../objects/shop';
-import { City } from '../objects/city';
+import { Shop } from '../../../objects/shop';
+import { City } from '../../../objects/city';
 
 @Component({
     templateUrl:'app/html/addShop.component.html'
