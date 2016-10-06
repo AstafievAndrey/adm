@@ -3,7 +3,8 @@ var gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     ts          = require("gulp-typescript"),
     sourcemaps  = require('gulp-sourcemaps'),
-    tsProject   = ts.createProject("tsconfig.json");
+    tsProject   = ts.createProject("tsconfig.json"),
+    rename      = require('gulp-rename');
 
 gulp.task('ts',function () {
     return tsProject.src()
@@ -12,7 +13,8 @@ gulp.task('ts',function () {
 });
 
 gulp.task('copyHtml',function(){
-    return gulp.src('dev/assets/html/**/*.html')
+    return gulp.src('dev/ts/**/*.html')
+            .pipe(rename({dirname: ''}))
             .pipe(gulp.dest('app/html'));
 });
 
@@ -22,7 +24,8 @@ gulp.task('sync', function() {
 });
 
 gulp.task('copyCss',function(){
-    return gulp.src('dev/assets/css/**/*.css')
+    return gulp.src('dev/ts/**/*.css')
+            .pipe(rename({dirname: ''}))
             .pipe(gulp.dest('app/css'));
 });
 
@@ -44,6 +47,6 @@ gulp.task('browser-sync',function(){
 //в скобках запускаем те таски которые должны запуститься до watch
 gulp.task('watch', ['ts','copyHtml','copyCss'], function(){
         gulp.watch('dev/ts/**/*.ts',['ts']);//релодим при изменеии файлов ts
-        gulp.watch('dev/assets/css/**/*.css',['copyCss']);
-        gulp.watch('dev/assets/html/**/*.html',['copyHtml']);
+        gulp.watch('dev/ts/**/*.css',['copyCss']);
+        gulp.watch('dev/ts/**/*.html',['copyHtml']);
 });
