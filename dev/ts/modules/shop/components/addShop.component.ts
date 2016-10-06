@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Shop } from '../../../objects/shop';
-import { City } from '../../../objects/city';
+
+import { CityService } from '../../../services/city.service';
+import { TypeShopService } from '../../../services/typeShop.service';
+
 
 @Component({
     templateUrl:'app/html/addShop.component.html'
 })
 
-export class AddShopComponent{
+export class AddShopComponent implements OnInit{
     
     shop:Shop;
     numbers:number[];
     
-    constructor(){
+    constructor(public cityService:CityService,public typeShopService:TypeShopService){
 //        this.numbers = Array(24).fill().map((x,i)=>i+1);//работает в браузерах поддерживающих EcmaScript 6
         this.numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];
         this.shop = {
@@ -46,6 +49,10 @@ export class AddShopComponent{
                     }
     }
     
+    ngOnInit(){
+        this.cityService.getCities();
+        this.typeShopService.getTypes();
+    }
         
     onSubmit(){
         console.log(this.shop);
