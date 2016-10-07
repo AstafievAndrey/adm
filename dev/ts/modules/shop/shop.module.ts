@@ -6,6 +6,7 @@ import { FormsModule }      from '@angular/forms';
 import { ShopComponent }   from './shop.component';
 import { ListShopComponent }   from './components/listShop.component';
 import { AddShopComponent }         from './components/addShop.component';
+import { EditShopComponent }         from './components/editShop.component';
 
 @NgModule({
     imports:      [ 
@@ -16,7 +17,8 @@ import { AddShopComponent }         from './components/addShop.component';
     declarations: [ 
         ShopComponent,
         ListShopComponent,
-        AddShopComponent
+        AddShopComponent,
+        EditShopComponent
     ],
     providers: [
         

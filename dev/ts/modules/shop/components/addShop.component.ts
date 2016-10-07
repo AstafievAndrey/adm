@@ -7,7 +7,7 @@ import { TypeShopService } from '../../../services/typeShop.service';
 
 
 @Component({
-    templateUrl:'app/html/addShop.component.html'
+    templateUrl:'app/html/shop.component.html'
 })
 
 export class AddShopComponent implements OnInit{
