@@ -2,7 +2,6 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent }   from './app.component';
-import { ShopComponent } from './modules/shop/shop.component';
 
 import { AuthGuard }                from './services/auth-guard.service';
 
@@ -21,7 +20,8 @@ const appRoutes: Routes = [
                 canActivateChild: [AuthGuard],
                 children: [
                     { path: '', redirectTo: '/shop',pathMatch: 'full' },
-                    { path: 'shop' }
+                    { path: 'shop' },
+                    { path: 'product' }
                 ]
             }
         ]

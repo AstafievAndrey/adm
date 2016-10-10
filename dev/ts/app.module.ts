@@ -11,12 +11,14 @@ import { CityService }                from './services/city.service';
 import { TypeShopService }                from './services/typeShop.service';
 import { ShopService }                from './services/shop.service';
 
-import { ShopModule }    from './modules/shop/shop.module'
+import { ShopModule }    from './modules/shop/shop.module';
+import { ProductModule }    from './modules/product/product.module';
 
 @NgModule({
     imports:      [ 
         BrowserModule,
         ShopModule,
+        ProductModule,
         routing 
     ],
     declarations: [ 

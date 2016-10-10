@@ -5,7 +5,7 @@ import { AuthGuard }                from '../../services/auth-guard.service';
 import { ShopComponent }            from './shop.component';
 import { ListShopComponent }        from './components/listShop.component';
 import { AddShopComponent }         from './components/addShop.component';
-import { EditShopComponent }         from './components/editShop.component';
+import { EditShopComponent }        from './components/editShop.component';
 
 const shopRoutes: Routes = [
     { 
