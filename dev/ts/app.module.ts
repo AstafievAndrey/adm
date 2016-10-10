@@ -8,7 +8,7 @@ import { LoginComponent }   from './modules/login/login.component';
 import { AuthGuard }                from './services/auth-guard.service';
 import { AuthService }                from './services/auth.service';
 import { CityService }                from './services/city.service';
-import { TypeShopService }                from './services/typeShop.service';
+import { CategoryService }                from './services/category.service';
 import { ShopService }                from './services/shop.service';
 
 import { ShopModule }    from './modules/shop/shop.module';
@@ -29,7 +29,7 @@ import { ProductModule }    from './modules/product/product.module';
         AuthGuard,
         AuthService,
         CityService,
-        TypeShopService,
+        CategoryService,
         ShopService
     ],
     bootstrap:    [ AppComponent ],

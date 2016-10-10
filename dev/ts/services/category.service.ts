@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { TypeShop } from '../objects/typeShop';
+import { Category } from '../objects/category';
 
 @Injectable()
-export class TypeShopService {
+export class CategoryService {
     
-    types:TypeShop[];
+    categories:Category[];
     
-    getTypes(){
-        console.log(this.types);
-        if(this.types===undefined){
-            this.types = [
+    getCategories(){
+        console.log(this.categories);
+        if(this.categories===undefined){
+            this.categories = [
                             {id:1,name:"Кальянная"},
                             {id:2,name:"Магазин"},
                             {id:3,name:"Другое"}

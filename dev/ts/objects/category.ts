@@ -1,4 +1,4 @@
-export class TypeShop{
+export class Category{
     id:number;
     name: string;
 }
