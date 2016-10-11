@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard }                from '../../services/auth-guard.service';
 import { ProductComponent }            from './product.component';
 import { ListProductComponent }            from './components/listProduct.component';
+import { AddProductComponent }            from './components/addProduct.component';
 
 const productRoutes: Routes = [
     { 
@@ -15,7 +16,8 @@ const productRoutes: Routes = [
                 path: '',
                 canActivateChild: [AuthGuard],
                 children: [
-                    { path: '', component: ListProductComponent}
+                    { path: '', component: ListProductComponent},
+                    { path: 'add', component: AddProductComponent}
                 ]
             }
         ]

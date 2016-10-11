@@ -3,8 +3,7 @@ import { Shop } from '../../../objects/shop';
 import { ShopService } from '../../../services/shop.service';
 
 @Component({
-    templateUrl:'app/html/listShop.component.html',
-    styleUrls:['app/css/listShop.component.css'], 
+    templateUrl:'app/html/listShop.component.html'
 })
 
 export class ListShopComponent implements OnInit{ 

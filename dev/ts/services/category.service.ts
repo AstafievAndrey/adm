@@ -17,4 +17,12 @@ export class CategoryService {
         } 
     }
     
+    getCategoriesProducts():Category[]{
+        return  [
+                    {id:1,name:"Товары"},
+                    {id:2,name:"Услуги"},
+                    {id:3,name:"Другое"}
+                ];
+    }
+    
 }
