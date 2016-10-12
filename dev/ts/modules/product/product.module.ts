@@ -1,11 +1,12 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }      from '@angular/forms';
-import { productRouting}  from './product.routing';
+import { NgModule }             from '@angular/core';
+import { BrowserModule }        from '@angular/platform-browser';
+import { FormsModule }          from '@angular/forms';
+import { productRouting}        from './product.routing';
          
-import { ProductComponent }   from './product.component';
-import { ListProductComponent }   from './components/listProduct.component';
-import { AddProductComponent }   from './components/addProduct.component';
+import { ProductComponent }     from './product.component';
+import { ListProductComponent } from './components/listProduct.component';
+import { AddProductComponent }  from './components/addProduct.component';
+import { EditProductComponent } from './components/editProduct.component';
 
 @NgModule({
     imports:      [ 
@@ -16,7 +17,8 @@ import { AddProductComponent }   from './components/addProduct.component';
     declarations: [ 
         ProductComponent,
         ListProductComponent,
-        AddProductComponent
+        AddProductComponent,
+        EditProductComponent
     ],
     providers: [
         

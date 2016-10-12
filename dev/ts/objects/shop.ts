@@ -7,7 +7,6 @@ export class Schedule{
 }
 
 export class Shop{
-    
     id: number;
     enabled:number;
     name: string;

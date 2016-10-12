@@ -5,6 +5,7 @@ export class Product{
     price:string;
     desc:string;
     short_desc:string;
+    active:boolean;
 }
 
 

@@ -11,7 +11,7 @@ import { CategoryService } from '../../../services/category.service';
     templateUrl:'app/html/shop.component.html'
 })
 
-export class EditShopComponent{
+export class EditShopComponent implements OnInit{
     
     shop:Shop;
     numbers:number[];
