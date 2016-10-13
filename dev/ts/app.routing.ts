@@ -21,7 +21,8 @@ const appRoutes: Routes = [
                 children: [
                     { path: '', redirectTo: '/shop',pathMatch: 'full' },
                     { path: 'shop' },
-                    { path: 'product' }
+                    { path: 'product' },
+                    { path: 'file' }
                 ]
             }
         ]

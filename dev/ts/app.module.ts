@@ -14,12 +14,14 @@ import { ProductService }   from './services/product.service';
 
 import { ShopModule }       from './modules/shop/shop.module';
 import { ProductModule }    from './modules/product/product.module';
+import { FileModule }       from './modules/file/file.module';
 
 @NgModule({
     imports:      [ 
         BrowserModule,
         ShopModule,
         ProductModule,
+        FileModule,
         routing 
     ],
     declarations: [ 
