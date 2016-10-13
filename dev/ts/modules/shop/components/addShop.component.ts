@@ -28,7 +28,7 @@ export class AddShopComponent implements OnInit{
                         inst:null,
                         vk:null,
                         city_id:1,
-                        type_id:1,
+                        category_id:1,
                         short_desc:'',
                         desc:'',
                         parking:"false",

@@ -16,7 +16,7 @@ export class Shop{
     inst:string;
     vk:string;
     city_id:number;
-    type_id:number;
+    category_id:number;
     short_desc:string;
     desc:string;
     parking:string;
